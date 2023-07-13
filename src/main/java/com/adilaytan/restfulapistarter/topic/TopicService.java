@@ -16,4 +16,8 @@ public class TopicService {
 		return topics;
 	}
 	
+	public Topic getTopic(String id) {
+		return topics.stream().filter(x -> x.getId().equals(id)).findFirst().get();
+	}
+	
 }
